@@ -107,6 +107,15 @@ var result = passwordValidation.ValidatePassword(password, confirmPassword,new P
     }
 });
 
+if (result.IsValid)
+{
+    // do some stuff here
+}
+else
+{
+    Console.WriteLine(result.FailureMessages);
+}
+
 ```
 
 
