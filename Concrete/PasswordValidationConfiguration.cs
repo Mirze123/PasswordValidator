@@ -9,6 +9,10 @@ namespace PasswordValidator
 {
     public class PasswordValidationConfiguration
     {
+        public PasswordValidationConfiguration()
+        {
+            FailureMessages = new PasswordValidationFailureMessages();
+        }
 
         public bool ContainUpperCase { get; set; } = true;
         public bool ContainLowerCase { get; set; } = true;
