@@ -68,5 +68,24 @@ This property indicates the minimum length of the password.
 
 This property contains a list of failure messages for each validation condition.
 
+# Examples
+
+1. With Default Configurations
+
+```cs
+
+IPasswordValidation passwordValidation = new PasswordValidation();
+var result = passwordValidation.ValidatePassword(password,confirmPassword);
+
+if(result.IsValid)
+{
+  //do some stuff here
+}
+else
+{
+  Console.Writeline(result.FailureMessages);
+}
+
+```
 
 
