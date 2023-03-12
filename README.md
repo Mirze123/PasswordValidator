@@ -88,4 +88,25 @@ else
 
 ```
 
+2. With Customized configurations
+
+``` cs
+IPasswordValidation passwordValidation = new PasswordValidation();
+
+var result = passwordValidation.ValidatePassword(password, confirmPassword,new PasswordValidationConfiguration()
+{
+    ContainLowerCase = true,
+    ContainNumber = true,
+    ContainSymbol = false,
+    ContainUpperCase = true,
+    ContainWhiteSpace = false,
+    FailureMessages = new PasswordValidationFailureMessages()
+    {
+        PasswordsDoesntMatch = "Passwords are incorrect",
+        DoesNotContainNumber = "Password does not contain a number"
+    }
+});
+
+```
+
 
